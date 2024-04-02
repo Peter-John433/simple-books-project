@@ -32,25 +32,25 @@
         return{
             books:[
              {
-               title: 'Healing after loss',
-               author: 'Martha W Hickman',
-               img: 'src/assets/img/img-1.webp',
+               title: 'note to self',
+               author: 'gayle king',
+               img: 'src/assets/img/note-1.jpg',
                url: 'https://www.barnesandnoble.com/w/healing-after-loss-martha-w-hickman/1103371715;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9780380773381',
                id: 1,
                isFav : true  
              },
              {
-               title: 'We who wrettle with God',
-               author: 'Jordan B. Peterson',
-               img: 'src/assets/img/img-2.webp',
+               title: 'you can',
+               author: 'GeorgeMatthewAdams',
+               img: 'src/assets/img/note-2.jpg',
                url: 'https://www.barnesandnoble.com/w/we-who-wrestle-with-god-jordan-b-peterson/1144781442;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9798217014590',
                id: 2,
                isFav: false
              },
              {
-               title: 'The greatest salesman in the world',
-               author: 'Og Mandino',
-               img: 'src/assets/img/img-3.webp',
+               title: 'Make your bed',
+               author: 'william H, mcraven(rt)',
+               img: 'src/assets/img/note-3.jpg',
                url: 'https://www.barnesandnoble.com/w/the-greatest-salesman-in-the-world-og-mandino/1100273165;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9780553277579',
                id: 3,
                isFav: true
