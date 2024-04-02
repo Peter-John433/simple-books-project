@@ -1,0 +1,154 @@
+<template>
+    <div>
+        <div class="container">
+            <div>
+                <button @click="toggleBtn">
+                    <span v-if="showBooks">hide books</span>
+                    <span v-else>show books</span>
+                </button>
+            </div>
+            <div v-if="showBooks">
+                <ul>
+                    <!-- v-for is use for list rendering, where by the first property represent each item in the array while the second property represent the array object -->
+                    <li v-for="book in books" :class="{ fav : book.isFav }">
+                        <!-- v-bind is use to bind data property to html dynamically, this take the value from your script and replace it with your html element dynamically -->
+                        <a :href="book.url"><img :src="book.img" :alt="book.title" loading="lazy"></a>
+                        <p>{{ book.title }}</p>
+                        <p>{{ book.author }}</p>
+                    </li>
+                </ul>
+            </div>
+            <div v-else :class="availableBooks">
+                click button above to see all books available
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+  export default{
+    name: 'Home',
+    data(){
+        return{
+            books:[
+             {
+               title: 'Healing after loss',
+               author: 'Martha W Hickman',
+               img: 'src/assets/img/img-1.webp',
+               url: 'https://www.barnesandnoble.com/w/healing-after-loss-martha-w-hickman/1103371715;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9780380773381',
+               id: 1,
+               isFav : true  
+             },
+             {
+               title: 'We who wrettle with God',
+               author: 'Jordan B. Peterson',
+               img: 'src/assets/img/img-2.webp',
+               url: 'https://www.barnesandnoble.com/w/we-who-wrestle-with-god-jordan-b-peterson/1144781442;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9798217014590',
+               id: 2,
+               isFav: false
+             },
+             {
+               title: 'The greatest salesman in the world',
+               author: 'Og Mandino',
+               img: 'src/assets/img/img-3.webp',
+               url: 'https://www.barnesandnoble.com/w/the-greatest-salesman-in-the-world-og-mandino/1100273165;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9780553277579',
+               id: 3,
+               isFav: true
+             }
+           ],
+           showBooks: false,
+           availableBooks: 'my-books'
+        }
+    },
+
+    methods:{
+        toggleBtn(){
+            this.showBooks = !this.showBooks
+        }
+    }
+  }
+</script>
+
+<style scoped>
+  li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin: 1rem 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    list-style: none;
+  }
+
+  img{
+    width: 80px;
+    object-fit: cover;
+  }
+
+  .fav{
+    background-color: pink;
+    color: white;
+  }
+
+  .my-books{
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    width: 50%;
+    margin: 2rem auto;
+    background-color: #27ec27;
+    font-weight: 600;
+    padding: 1rem 0;
+    box-shadow: 1px 1px 3px 3px  #27ec27;
+  }
+
+  button{
+     background-color: green;
+     width: 100px;
+     margin: 1rem auto;
+     padding: 4px 0;
+     display: block;
+     color: #FFFFFF;
+     font-weight: bolde;
+     text-transform: capitalize;
+     border: 2px solid #FFFFFF;
+     outline: 2px solid #27ec27;
+     cursor: pointer;
+     transition: all 500ms ease-in-out;
+  }
+
+  button:hover{
+    background-color: #27ec27;
+    color: #000000;
+  }
+</style>
+
+ <!-- scoped style is use to style single component, when this a scoped is not apply to your style, the css properties you declared will be visible in all components (apply to all component which have the same element holding those css properties),it's therefore advised to use scoped when using style in your component or file to avoid it been present in all your vue components, furthermore this style property can be overridden in different ways
+   ways includes:
+   1. by  using a class directly on an element (e.g., .red)
+   2 . by combining classes (e.g., .bold.italic)
+   3. by overridden the styles in your file component to prevent styles from other components  being applied to yours.
+   4. by attaching classes and id to your component elements 
+   5. by using global styles to apply to a particular component
+
+   Note: global style is use to make style apply to all vue components present in the vue app, this method can still be overridden using scoped styles method
+
+   ==> when ever you want a particular style to be apply to all your vue components in the same vue application, the best way to go about it is using global scoped to declare all your style properties which we have already done in base.css file and main.css respectively.
+
+   V-FOR DIRECTIVE
+
+   v-for directive is use here to make our codeing easier unlike javascipt that we'll have to use a for loop or forEach() function to render those items, vue make v-for a short process to help our coding life easier, once v-for is use in any element or component, that element or component will repeat itself the number of items in the array or object, and it very easy to go around with, scroll up and you will see where we make use of v-for directive which make our list items repeat X3 (meaning items in the bokks array is 3 so the v-for will have to repeat untill it can no longer repeat again and it stop).
+   
+   ==> data() in vue is a function that returns and object, once a data() function is declared it must return{} an object for vue to locate all items inside the data, items(properties) in data can be of any type this includes:
+   1. string
+   2. number
+   3. boolean 
+   4. array
+   5. object
+   6 null etc. -->
+
+
