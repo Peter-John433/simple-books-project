@@ -34,7 +34,7 @@
              {
                title: 'note to self',
                author: 'gayle king',
-               img: 'src/assets/img/note-1.jpg',
+               img: 'src/assets/img/booknote-1.webp',
                url: 'https://www.barnesandnoble.com/w/healing-after-loss-martha-w-hickman/1103371715;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9780380773381',
                id: 1,
                isFav : true  
