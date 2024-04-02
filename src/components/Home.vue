@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container">
+        <div class="container cont">
             <div>
                 <button @click="toggleBtn">
                     <span v-if="showBooks">hide books</span>
@@ -80,6 +80,9 @@
 </script>
 
 <style scoped>
+  .cont{
+     padding: 20px;
+  }
 
   .fav{
     background-color: pink;

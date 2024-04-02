@@ -9,6 +9,16 @@ body{
    background-color: #F1F1F1;
 }
 
+#header{
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #000000;
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
 .container{
    width: 100%;
    margin-left: auto;
@@ -58,6 +68,10 @@ img{
   .container{
     width: 90%;
  }
+
+ #header{
+  font-size: 20px;
+}
 
  li{
   display: flex;

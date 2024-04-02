@@ -25,17 +25,6 @@
   }
 </script>
 
-<style>
-   #header{
-       text-align: center;
-       padding-top: 1.5rem;
-       padding-bottom: 1.5rem;
-       background-color: #000000;
-       color: white;
-       text-transform: capitalize;
-   }
-</style>
-
 
 <!-- 
   This project will give you more knowledge on how to use some vue directives and components
