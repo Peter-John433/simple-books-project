@@ -12,7 +12,8 @@
                     <!-- v-for is use for list rendering, where by the first property represent each item in the array while the second property represent the array object -->
                     <li v-for="book in books" :class="{ fav : book.isFav }" @click="toggleFav(book)">
                         <!-- v-bind is use to bind data property to html dynamically, this take the value from your script and replace it with your html element dynamically -->
-                        <img :src="book.img" :alt="book.title">
+                        <!-- <img :src="book.img" :alt="book.title"> -->
+                        <img src="../assets/img/booknote-1.webp" alt="">
                         <p>{{ book.title }}</p>
                         <p>{{ book.author }}</p>
                     </li>
