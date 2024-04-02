@@ -14,6 +14,39 @@ body{
    margin-left: auto;
    margin-right: auto;
 }
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  margin: 1rem 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+  list-style: none;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+img{
+  width: 50px;
+  object-fit: cover;
+}
+
+.my-books{
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  width: 100%;
+  margin: 2rem auto;
+  background-color: #27ec27;
+  font-weight: 600;
+  padding: 1rem 0;
+  box-shadow: 1px 1px 3px 3px  #27ec27;
+  font-size: 10px;
+}
 
 @media screen and (min-width: 576px) {
   .container{
@@ -25,6 +58,21 @@ body{
   .container{
     width: 90%;
  }
+
+ li{
+  display: flex;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+img{
+  width: 80px;
+}
+
+.my-books{
+  width: 50%;
+  font-size: 1rem;
+}
 }
 
 @media screen and (min-width: 992px) {
