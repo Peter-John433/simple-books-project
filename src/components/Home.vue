@@ -13,7 +13,7 @@
                     <li v-for="book in books" :class="{ fav : book.isFav }" @click="toggleFav(book)">
                         <!-- v-bind is use to bind data property to html dynamically, this take the value from your script and replace it with your html element dynamically -->
                         <!-- <img :src="book.img" :alt="book.title"> -->
-                        <img src="../assets/img/booknote-1.webp" alt="">
+                        <img src="../assets/img/note-22.png" alt="">
                         <p>{{ book.title }}</p>
                         <p>{{ book.author }}</p>
                     </li>
@@ -33,10 +33,9 @@
         return{
             books:[
              {
-               title: 'note to self',
-               author: 'gayle king',
+              title: 'you can',
+               author: 'GeorgeMatthewAdams',
                img: 'src/assets/img/booknote-1.webp',
-               url: 'https://www.barnesandnoble.com/w/healing-after-loss-martha-w-hickman/1103371715;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9780380773381',
                id: 1,
                isFav : true  
              },
@@ -44,15 +43,13 @@
                title: 'you can',
                author: 'GeorgeMatthewAdams',
                img: 'src/assets/img/note-2.jpg',
-               url: 'https://www.barnesandnoble.com/w/we-who-wrestle-with-god-jordan-b-peterson/1144781442;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9798217014590',
                id: 2,
                isFav: false
              },
              {
-               title: 'Make your bed',
-               author: 'william H, mcraven(rt)',
+              title: 'you can',
+               author: 'GeorgeMatthewAdams',
                img: 'src/assets/img/note-3.jpg',
-               url: 'https://www.barnesandnoble.com/w/the-greatest-salesman-in-the-world-og-mandino/1100273165;jsessionid=02132081627B4535FEC4BE4E69963D04.prodny_store02-atgap15?ean=9780553277579',
                id: 3,
                isFav: true
              }
